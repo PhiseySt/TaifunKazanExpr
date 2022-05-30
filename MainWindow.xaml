@@ -1,0 +1,52 @@
+﻿<Window x:Class="TaifunKazanExpress.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="StartComponent"
+        Title="TaifunKazanExpress" Height="350" Width="450" AllowDrop="True" MouseDown="Window_MouseDown"
+        AllowsTransparency="True" Background="Transparent" WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Width="auto" Height="auto" BorderBrush="LimeGreen" BorderThickness="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#e7ebf7" Offset="0.5"></GradientStop>
+                            <GradientStop Color="#cee3ff" Offset="0"></GradientStop>
+                        </GradientStopCollection>
+                    </GradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="#B5CBEF">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Background="#B5CBEF">
+                            <TextBlock VerticalAlignment="Center" FontSize="14" TextWrapping="Wrap"
+                               Foreground="White" HorizontalAlignment="Center">
+                                TaifunKazanExpress - автоматизированный программный комплекс</TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Background="#B5CBEF">
+                            <Button ToolTip="Начало процесса автоматического заполнения слотов" Click="StartProcessClick" VerticalAlignment="Center"
+                                        HorizontalAlignment="Stretch"
+                                    Content="Запуск процесса" Foreground="White" FontSize="16"
+                                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalContentAlignment="Center" Margin="3,0">
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <TextBlock Padding="5" Grid.Row="1" HorizontalAlignment="Center">
+                <Hyperlink NavigateUri="https://kazanexpress.ru/taifun-co" RequestNavigate="Hyperlink_RequestNavigate">
+                        Магазин taifun-co
+                </Hyperlink>
+                </TextBlock>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
